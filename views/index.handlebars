@@ -1,21 +1,27 @@
 <h1>Burger Eater</h1>
 
-<h2>Currently on menu:</h2>
-<ul>
-    {{#each burgers}}
-        {{#unless devoured}}
-            {{> burger-block devoured=false}}
-        {{/unless}}
-    {{/each}}
-</ul>
+<div class="burger-container">
+    <h2>Currently on menu:</h2>
+    <ul>
+        {{#each burgers}}
+            {{#unless devoured}}
+                {{> burger-block devoured=false}}
+            {{/unless}}
+        {{/each}}
+    </ul>
 
-<h2>Now off menu:</h2>
-<ul>
-    {{#each burgers}}
-        {{#if devoured}}
-            {{> burger-block devoured=true}}
-        {{/if}}
-    {{/each}}
-</ul>
+    <h2>Now off menu:</h2>
+    <ul>
+        {{#each burgers}}
+            {{#if devoured}}
+                {{> burger-block devoured=true}}
+            {{/if}}
+        {{/each}}
+    </ul>
+</div>
 
 <h2>Add to the menu:</h2>
+<form class="create-burger">
+    <input type="text" id="add-burger">
+    <input type="submit" value="Submit">
+</form>
