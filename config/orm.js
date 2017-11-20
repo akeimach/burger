@@ -4,6 +4,7 @@ var connection = require("./connection.js");
 var orm = {
     selectAll: function(table, cb) {
         var queryString = "SELECT * FROM " + table + ";";
+        console.log("ORM: " + queryString);
         connection.query(queryString, function(err, result) {
             if (err) throw err;
             cb(result);
@@ -20,6 +21,7 @@ var orm = {
         queryString += ") VALUES (";
         queryString += questions.toString();
         queryString += ")";
+        console.log("ORM: " + queryString);
         connection.query(queryString, vals, function(err, result) {
             if (err) throw err;
             cb(result);
@@ -30,7 +32,6 @@ var orm = {
         var objects = [];
         for (var key in obj) {
             if (Object.hasOwnProperty.call(obj, key)) {
-                //if ((typeof(obj[key] === "string") && (obj[key].))
                 objects.push(key + "=" + obj[key]);
             }
         }
@@ -38,19 +39,11 @@ var orm = {
         queryString += objects.toString();
         queryString += " WHERE ";
         queryString += condition;
+        console.log("ORM: " + queryString);
         connection.query(queryString, function(err, result) {
             if (err) throw err;
             cb(result);
         });
-    },
-
-    deleteOne: function(table, condition, cb) {
-        var queryString = "DELETE FROM " + table + "WHERE ";
-        queryString += condition;
-        connection.query(queryString, function(err, result) {
-            if (err) throw err;
-            cb(result);
-        })
     }
 };
 
