@@ -5,7 +5,11 @@
     <section class="col">
         <h2>Currently on menu:</h2>
         <ul>
-            {{#each burgers}}{{#unless devoured}}{{> burger-block devoured=false}}{{/unless}}{{/each}}
+            {{#each burgers}}
+                {{#unless devoured}}
+                    {{> burger-block devoured=false}}
+                {{/unless}}
+            {{/each}}
         </ul>
     </section>
     <section class="col">

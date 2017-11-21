@@ -1,6 +1,6 @@
 $(document.body).ready(function() {
 
-    $(".set-devoured").on("click", function(event) {
+    $(".not-devoured").on("click", function(event) {
         event.preventDefault();
         var burgerData = { devoured: true }
         $.ajax("/api/burgers/" + $(this).data("id"), {
