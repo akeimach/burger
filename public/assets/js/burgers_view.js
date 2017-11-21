@@ -1,4 +1,4 @@
-$(document.body).ready(function(){
+$(document.body).ready(function() {
 
     $(".set-devoured").on("click", function(event) {
         event.preventDefault();
@@ -7,8 +7,7 @@ $(document.body).ready(function(){
             type: "PUT",
             data: burgerData
         }).then(function(result) {
-            //TODO: dont reload page to update
-            location.reload();
+            location.reload(); //// reloads entire page
         });
     });
 
