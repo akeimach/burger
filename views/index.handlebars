@@ -1,0 +1,32 @@
+<header>
+    <h1>Burger Eater</h1>
+</header>
+<section class="row">
+    <section class="col">
+        <h2>Currently on menu:</h2>
+        <ul>
+            {{#each burgers}}
+                {{#unless devoured}}
+                    {{> burger-block devoured=false}}
+                {{/unless}}
+            {{/each}}
+        </ul>
+    </section>
+    <section class="col">
+        <h2>Now off menu:</h2>
+        <ul>
+            {{#each burgers}}
+                {{#if devoured}}
+                    {{> burger-block devoured=true}}
+                {{/if}}
+            {{/each}}
+        </ul>
+    </section>
+</section>
+<section class="row">
+    <h2>Add to the menu:</h2>
+    <form class="create-burger">
+        <input class="input-style" type="text" id="add-burger">
+        <input class="btn-style btn-align" type="submit" value="Submit">
+    </form>
+</section>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/burger_style.css">
+    <link rel="icon" type="image/png" href="assets/img/burger-icon.png"/>
+    <title>Burger Eater</title>
+</head>
+<body>
+    <header>
+        <h1>Burger Eater</h1>
+    </header>
+
+    <section class="row">
+
+        <section class="col">
+            <h2>Currently on menu:</h2>
+            <ul>
+                <li>
+                    1. bacon cheeseburger
+                    <button class="set-devoured btn-style" data-id="1" data-devoured="false">
+                        Devour it!
+                    </button>
+                </li>
+                <li>
+                    3. BLT burger
+                    <button class="set-devoured btn-style" data-id="3" data-devoured="false">
+                        Devour it!
+                    </button>
+                </li>
+                <li>
+                    4. test
+                    <button class="set-devoured btn-style" data-id="4" data-devoured="false">
+                        Devour it!
+                    </button>
+                </li>
+                <li>
+                    5. Super Extra Extreme Beef Burger
+                    <button class="set-devoured btn-style" data-id="5" data-devoured="false">
+                        Devour it!
+                    </button>
+                </li>
+            </ul>
+        </section>
+
+        <section class="col">
+            <h2>Now off menu:</h2>
+            <ul>
+                <li>
+                    2. blue cheese burger
+                    <button class="set-devoured btn-style" data-id="2" data-devoured="true">
+                        Devoured!
+                    </button>
+                </li>
+                <li>
+                    6. Ahi Tuna Burger Rice Bun
+                    <button class="set-devoured btn-style" data-id="6" data-devoured="true">
+                        Devoured!
+                    </button>
+                </li>
+            </ul>
+        </section>
+
+    </section>
+
+    <section class="row">
+        <!-- <section class="to-devour"> -->
+            <h2>Add to the menu:</h2>
+            <form class="create-burger">
+                <input type="text" class="input-style" id="add-burger">
+                <input class="btn-style btn-align" type="submit" value="Submit">
+            </form>
+        <!-- </section> -->
+    </section>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery.js"></script>
+    <script type="text/javascript" src="assets/js/burgers_view.js"></script>
+</body>
+</html>
